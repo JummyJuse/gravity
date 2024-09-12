@@ -7,12 +7,12 @@
 using namespace std;
 int res_x = 89, res_y = 50; //caps at around 89, 50 (depending on the termanal window size
 
-int calculationResolution = 1; //amount of calculations made per frame
+int calculationResolution = 50; //amount of calculations made per frame
 
 vector<double> mass, object_x, object_y, velocity_x, velocity_y;
 vector<bool> screen((res_x* res_y), false);
 
-double G = 0.01; //gravitational constant (4 is pretty good)
+double G = 4; //gravitational constant (4 is pretty good)
 
 void createObject(double mass_value, double x, double y, double x_vel, double y_vel) {
 	mass.push_back(mass_value);
