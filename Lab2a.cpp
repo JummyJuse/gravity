@@ -60,6 +60,8 @@ start:
 			}
 		}
 	}
+
+	//jhjlkh
 	else {
 		int selectionCap = 5, arrow = 4;
 		while (true) {
