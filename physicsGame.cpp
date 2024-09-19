@@ -1,6 +1,7 @@
 #include<iostream>
+#include<sstream>
 #include<vector>
-#include <thread>
+#include<thread>
 #include<chrono>
 #include<conio.h>
 
@@ -69,19 +70,20 @@ void clearScreen() {
 }
 
 void renderScreen() {
+
 	system("cls");
 	for (int i = 0; i < res_y; ++i) {
-
+		ostringstream line;
 		for (int p = 0; p < res_x; ++p) {
 
 			if (screen[i * res_x + p]) {
-				cout << "[]";
+				line << "[]";
 			}
 			else {
-				cout << "  ";
+				line << "  ";
 			}
 		}
-		cout << endl;
+		cout << line.str() << "\n";
 	}
 }
 
