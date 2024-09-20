@@ -13,7 +13,7 @@ int calculationResolution =100; //amount of calculations made per frame
 vector<double> mass, object_x, object_y, velocity_x, velocity_y;
 vector<bool> screen((res_x* res_y), false);
 
-double G = 0.01; //gravitational constant (4 is pretty good)
+double G = 0.1; //gravitational constant (4 is pretty good)
 
 void createObject(double mass_value, double x, double y, double x_vel, double y_vel) {
 	mass.push_back(mass_value);
@@ -40,6 +40,10 @@ void updatePositions() {
 		object_x[f] = object_x[f] + (velocity_x[f]/calculationResolution);
 		object_y[f] = object_y[f] + (velocity_y[f]/calculationResolution);
 		drawPoint(object_x[f], object_y[f]);
+		// air resistance
+		//velocity_x[f] = velocity_x[f] / (1 + 0.01 / calculationResolution);
+		//velocity_y[f] = velocity_y[f] / (1 + 0.01 / calculationResolution);
+
 	}
 
 }
@@ -88,7 +92,7 @@ void renderScreen() {
 }
 
 void main() {
-	createObject(10, 20, 30, 0, 0);
+	createObject(10, 20, 30, 0.1, 0);
 	createObject(1, 50, 30, 0, -0.4);
 	createObject(0.1, 55, 30, 0.0, -0.44);
 

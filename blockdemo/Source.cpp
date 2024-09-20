@@ -7,7 +7,7 @@
 #include<thread>
 
 using namespace std;
-int cubeLength = 20;
+const int cubeLength = 20;
 int distanceFromCamera = 50;
 float stepSize = 0.6;
 int FOV = 16;
@@ -50,9 +50,19 @@ void testMovements() {
 	}
 }
 void calculateFace(float cubeX, float cubeY, float cubeZ, int ch) {
-	x = (cubeY * sin(A) * sin(B) * cos(C)) - (cubeZ * cos(A) * sin(B) * cos(C)) + (cubeY * cos(A) * sin(C)) + (cubeZ * sin(A) * sin(C)) + (cubeX * cos(B) * cos(C));
-	y = (cubeY * cos(A) * cos(C)) + (cubeZ * sin(A) * cos(C)) - (cubeY * sin(A) * sin(B) * sin(C)) + (cubeZ * cos(A) * sin(B) * sin(C)) - (cubeX * cos(B) * sin(C));
-	z = (cubeZ * cos(A) * cos(B)) - (cubeY * sin(A) * cos(B)) + (cubeX * sin(B)) + distanceFromCamera;
+	x = (cubeY * sin(A) * sin(B) * cos(C)) 
+		- (cubeZ * cos(A) * sin(B) * cos(C)) 
+		+ (cubeY * cos(A) * sin(C)) 
+		+ (cubeZ * sin(A) * sin(C)) 
+		+ (cubeX * cos(B) * cos(C));
+	y = (cubeY * cos(A) * cos(C)) 
+		+ (cubeZ * sin(A) * cos(C)) 
+		- (cubeY * sin(A) * sin(B) * sin(C)) 
+		+ (cubeZ * cos(A) * sin(B) * sin(C)) 
+		- (cubeX * cos(B) * sin(C));
+	z = (cubeZ * cos(A) * cos(B)) 
+		- (cubeY * sin(A) * cos(B)) 
+		+ (cubeX * sin(B)) + distanceFromCamera;
 	float depth = 1 / z;
 	int px = ((screen_x / 2) - x * depth * FOV * 2),
 		py = ((screen_y / 2) - y * depth * FOV);
@@ -69,10 +79,10 @@ void calculateFace(float cubeX, float cubeY, float cubeZ, int ch) {
 void render() {
 	system("cls");
 	cout << "'wasd' to move\n";
-	int k = 0;
-	for (int i = 0; i < screen_y; i++) {
+	unsigned int k = 0;
+	for (unsigned int i = 0; i < screen_y; i++) {
 		ostringstream line;
-		for (int j = 0; j < screen_x; j++) {
+		for (unsigned int j = 0; j < screen_x; j++) {
 			line << buf[k];
 			k++;
 		}
@@ -100,6 +110,9 @@ void main() {
 			}
 		}
 		render();
+		A = A + 0.1;
+		B = B + 0.1;
+
 		//system("cls");for (int h = 0; h < buf.size(); h++) {cout << buf[h] << " ";}
 		testMovements();
 		tick();

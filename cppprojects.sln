@@ -9,7 +9,11 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "physicsGame", "..\physicsGa
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "wormGame", "..\wormGame\wormGame.vcxproj", "{FA846132-59C3-41C5-993F-AD250FEDB1E1}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Spinning Cube", "Spinning Cube\Spinning Cube.vcxproj", "{C569EC37-DE2A-4D42-A12E-2A87FB013A58}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CubeGame", "Spinning Cube\Spinning Cube.vcxproj", "{C569EC37-DE2A-4D42-A12E-2A87FB013A58}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "blockdemo", "blockdemo\blockdemo.vcxproj", "{5F4653E3-38C0-44CC-9C9E-7858259D6619}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "donut", "donut\donut.vcxproj", "{26A3A30D-2FD7-4334-8E84-D187DA5D41F8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +55,22 @@ Global
 		{C569EC37-DE2A-4D42-A12E-2A87FB013A58}.Release|x64.Build.0 = Release|x64
 		{C569EC37-DE2A-4D42-A12E-2A87FB013A58}.Release|x86.ActiveCfg = Release|Win32
 		{C569EC37-DE2A-4D42-A12E-2A87FB013A58}.Release|x86.Build.0 = Release|Win32
+		{5F4653E3-38C0-44CC-9C9E-7858259D6619}.Debug|x64.ActiveCfg = Debug|x64
+		{5F4653E3-38C0-44CC-9C9E-7858259D6619}.Debug|x64.Build.0 = Debug|x64
+		{5F4653E3-38C0-44CC-9C9E-7858259D6619}.Debug|x86.ActiveCfg = Debug|Win32
+		{5F4653E3-38C0-44CC-9C9E-7858259D6619}.Debug|x86.Build.0 = Debug|Win32
+		{5F4653E3-38C0-44CC-9C9E-7858259D6619}.Release|x64.ActiveCfg = Release|x64
+		{5F4653E3-38C0-44CC-9C9E-7858259D6619}.Release|x64.Build.0 = Release|x64
+		{5F4653E3-38C0-44CC-9C9E-7858259D6619}.Release|x86.ActiveCfg = Release|Win32
+		{5F4653E3-38C0-44CC-9C9E-7858259D6619}.Release|x86.Build.0 = Release|Win32
+		{26A3A30D-2FD7-4334-8E84-D187DA5D41F8}.Debug|x64.ActiveCfg = Debug|x64
+		{26A3A30D-2FD7-4334-8E84-D187DA5D41F8}.Debug|x64.Build.0 = Debug|x64
+		{26A3A30D-2FD7-4334-8E84-D187DA5D41F8}.Debug|x86.ActiveCfg = Debug|Win32
+		{26A3A30D-2FD7-4334-8E84-D187DA5D41F8}.Debug|x86.Build.0 = Debug|Win32
+		{26A3A30D-2FD7-4334-8E84-D187DA5D41F8}.Release|x64.ActiveCfg = Release|x64
+		{26A3A30D-2FD7-4334-8E84-D187DA5D41F8}.Release|x64.Build.0 = Release|x64
+		{26A3A30D-2FD7-4334-8E84-D187DA5D41F8}.Release|x86.ActiveCfg = Release|Win32
+		{26A3A30D-2FD7-4334-8E84-D187DA5D41F8}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
