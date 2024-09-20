@@ -5,7 +5,6 @@
 #include<math.h>
 #include<vector>
 #include<thread>
-#include<tuple>
 
 using namespace std;
 const float pi = 3.14159;
