@@ -12,19 +12,19 @@ const int torusRadius = 40,
 torusThickness = 15;
 const float subdA = 0.01,
 			subdB = 0.05;
-const int distanceFromCamera = 120,
-		  vFactor = 20,
-		  scr_x = 50, 
-		  scr_y = 25;
+const int distanceFromCamera = 275,
+		  vFactor = 90,
+		  scr_x = 160, 
+		  scr_y = 45;
 float A = 1 * pi / 2, B = 0, C = 0;
 float VA, VB, VC;
-vector<float> glv{ 0.5, 0.5 ,0 };
+vector<float> glv{ 10, 1 ,0 };
 vector<float> zbuffer;
 vector<float> buffer;
-vector<char> gradTable{ '@', '%', '#', '*', '+', '=', '-', ':', '.', ' '};
+vector<char> gradTable{ '@', '%', '#', '*', '=', '+', '-', ':', '.', ' '};
 
 void wait() {
-	this_thread::sleep_for(25ms);
+	this_thread::sleep_for(10ms);
 }
 float transform_x(float i, float j, float k) {
 	return (j * sin(A) * sin(B) * cos(C))
@@ -135,7 +135,7 @@ void main() {
 			}
 		}
 		system("cls");
-		cout << "I made a donut cus im hungry\nu can use 'wasd' to make the donut dance";
+		cout << "I made a donut cus im hungry\nu can use 'wasd' to make the donut dance\n";
 		unsigned int k = 0;
 		for (unsigned int i = 0; i < scr_y; i++) {
 			ostringstream line;
