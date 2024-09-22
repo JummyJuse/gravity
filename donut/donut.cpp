@@ -145,7 +145,7 @@ void main() {
 				}
 				else {
 					//line << gradTable[round((buffer[k] / 2) * 8)];
-					line << gradTable[ceil((buffer[k] / 2) * 15)];
+					line << gradTable[ceil((buffer[k] / 2) * (gradTable.size() - 1)];
 				}
 				k++;
 			}
