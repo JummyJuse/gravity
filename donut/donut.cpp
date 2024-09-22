@@ -21,7 +21,7 @@ float VA, VB, VC;
 vector<float> glv{ 10, 1 ,0 };
 vector<float> zbuffer;
 vector<float> buffer;
-vector<char> gradTable{ '@', '%', '#', '*', '=', '+', '-', ':', '.', ' '};
+vector<char> gradTable{ '█', '$', '&', '@', '%', '#', '*', '=', '+', '~', ':', '-', '`', '.', ' '};
 
 void wait() {
 	this_thread::sleep_for(10ms);
@@ -145,7 +145,7 @@ void main() {
 				}
 				else {
 					//line << gradTable[round((buffer[k] / 2) * 8)];
-					line << gradTable[ceil((buffer[k] / 2) * 8)];
+					line << gradTable[ceil((buffer[k] / 2) * 15)];
 				}
 				k++;
 			}
